@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Saad Sherif — iOS Engineer</title>
-<meta name="description" content="Saad Sherif — iOS Engineer building production apps with SwiftUI, Swift 6, and Clean Architecture. 50+ App Store releases.">
-<meta property="og:title" content="Saad Sherif — iOS Engineer">
-<meta property="og:description" content="SwiftUI · Swift 6 · Clean Architecture · 10+ App Store releases">
+<title>Saad Sherif — iOS Developer</title>
+<meta name="description" content="Saad Sherif — iOS Developer with 5+ years building production apps in Swift, SwiftUI, and UIKit. Clean Architecture, Swift 6 concurrency, 50+ App Store releases.">
+<meta property="og:title" content="Saad Sherif — iOS Developer">
+<meta property="og:description" content="Swift · SwiftUI · Swift 6 · Clean Architecture · 50+ App Store releases">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -25,6 +25,7 @@
 html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
+code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.88em}
 .wrap{max-width:960px;margin:0 auto;padding:0 20px}
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
 
@@ -42,7 +43,7 @@ nav ul a:hover{color:var(--text)}
 .eyebrow{font-size:.85rem;color:var(--accent);font-weight:600;margin-bottom:14px}
 .hero h1{font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.08;letter-spacing:-.035em;font-weight:800;max-width:720px}
 .hero h1 em{font-style:normal;color:var(--accent)}
-.hero p.lead{margin-top:20px;font-size:1.12rem;color:var(--muted);max-width:620px}
+.hero p.lead{margin-top:20px;font-size:1.12rem;color:var(--muted);max-width:640px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--surface);transition:transform .15s,border-color .15s}
 .btn:hover{transform:translateY(-1px);border-color:var(--accent)}
@@ -91,12 +92,18 @@ h2{font-size:1.6rem;letter-spacing:-.025em;margin-bottom:8px}
 .job p{color:var(--muted);font-size:.95rem;margin-top:6px}
 .job ul{margin:10px 0 0 18px;font-size:.94rem}
 .job li{margin-bottom:5px}
+.job li a{color:var(--accent)}
 @media (max-width:640px){.job{grid-template-columns:1fr;gap:4px}}
 
 /* skills */
 .skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
 .skill{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
 .skill h4{font-size:.95rem;margin-bottom:10px}
+.skill .tags{margin-bottom:0}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.edu .skill p{color:var(--muted);font-size:.92rem}
 
 /* contact */
 .contact{text-align:center;padding:72px 0}
@@ -121,9 +128,9 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow mono">iOS Engineer · Alexandria, Egypt · Open to remote</p>
-    <h1>I build production iOS apps with <em>SwiftUI</em> and clean architecture.</h1>
-    <p class="lead">5+ years shipping apps for clients in the Gulf and Egypt: marketplaces, live e-learning, legal consultation with VoIP calling, and ERP systems. I care about architecture that stays readable as the app grows.</p>
+    <p class="eyebrow mono">iOS Developer · Alexandria, Egypt · Open to remote</p>
+    <h1>I build and ship production iOS apps with <em>SwiftUI</em> and clean architecture.</h1>
+    <p class="lead">5+ years building apps in Swift, SwiftUI, and UIKit for clients in the Gulf and Egypt: marketplaces, live e-learning, legal consultation with VoIP calling, and ERP systems. I specialize in Clean Architecture (MVVM + Coordinators) and Swift 6 concurrency.</p>
     <div class="cta">
       <a class="btn primary" href="#work">See my work</a>
       <a class="btn" href="resume.pdf" download>
@@ -152,7 +159,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
 <section id="work">
   <div class="wrap">
     <h2>Selected work</h2>
-    <p class="sub">Apps I built and shipped. Most are two-sided products with separate apps for each role.</p>
+    <p class="sub">Apps I built and shipped. Most are two-sided products with a separate app for each role.</p>
 
     <!-- FEATURED: open-source flagship -->
     <div class="featured">
@@ -176,16 +183,24 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
     <div class="grid">
       <div class="card">
         <div class="kind">InnovaDigits · 2026</div>
-        <h3>Event Box</h3>
-        <p>Event-planning app for weddings, birthdays, and corporate events: vendor booking, gift registries, team chat, and budgets. Built fully in SwiftUI with a custom type-safe router across 10+ modular features.</p>
+        <h3>Event-Box</h3>
+        <p>Event-planning app for weddings, birthdays, and corporate events: vendor discovery and booking, guest management, gift registries, and team chat. Built fully in SwiftUI with a type-safe router across 10+ feature modules. Bilingual (Arabic/English).</p>
         <div class="tags"><span class="tag">SwiftUI</span><span class="tag">@Observable</span><span class="tag">Pusher</span><span class="tag">MVVM-C</span></div>
         <div class="links"><a href="https://apps.apple.com/eg/app/event-box/id6762186425" target="_blank" rel="noopener">App Store</a></div>
       </div>
 
       <div class="card">
-        <div class="kind">Legal services</div>
+        <div class="kind">AAIT · Livestock ERP · Kuwait</div>
+        <h3>Mesllah</h3>
+        <p>Livestock management ERP for a Kuwaiti client, covering production, feed, medications, vaccinations, animal history, employees, invoicing, and breeding requests, with offline-first sync.</p>
+        <div class="tags"><span class="tag">UIKit</span><span class="tag">Core Data</span><span class="tag">Combine</span><span class="tag">Modular</span></div>
+        <div class="links"><a href="https://apps.apple.com/app/id6753763543" target="_blank" rel="noopener">App Store</a></div>
+      </div>
+
+      <div class="card">
+        <div class="kind">AAIT · Legal services</div>
         <h3>Qetass</h3>
-        <p>Legal consultation platform with in-app voice and video calls that ring natively even when the app is closed.</p>
+        <p>Legal consultation platform with in-app voice and video calls that ring like regular phone calls, even when the app is closed.</p>
         <div class="tags"><span class="tag">CallKit</span><span class="tag">PushKit</span><span class="tag">OpenTok</span><span class="tag">AVFoundation</span></div>
         <div class="links">
           <a href="https://apps.apple.com/eg/app/id6455540367" target="_blank" rel="noopener">User app</a>
@@ -194,9 +209,9 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
       </div>
 
       <div class="card">
-        <div class="kind">E-learning</div>
+        <div class="kind">AAIT · E-learning</div>
         <h3>Yussr Education</h3>
-        <p>Live-streamed classes with an interactive whiteboard and real-time chat, optimized for iPad.</p>
+        <p>Live-streamed classes with an interactive whiteboard shared in real time, plus in-class chat. Optimized for iPad.</p>
         <div class="tags"><span class="tag">Agora</span><span class="tag">WebSocket</span><span class="tag">iPad</span></div>
         <div class="links">
           <a href="https://apps.apple.com/eg/app/id6448878704" target="_blank" rel="noopener">Student app</a>
@@ -205,17 +220,9 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
       </div>
 
       <div class="card">
-        <div class="kind">Livestock ERP · Kuwait</div>
-        <h3>Mesllah</h3>
-        <p>Farm management system covering production, feed, vaccinations, animal history, staff, and invoicing, with offline sync.</p>
-        <div class="tags"><span class="tag">UIKit</span><span class="tag">Core Data</span><span class="tag">Combine</span><span class="tag">Modular</span></div>
-        <div class="links"><a href="https://apps.apple.com/app/id6753763543" target="_blank" rel="noopener">App Store</a></div>
-      </div>
-
-      <div class="card">
-        <div class="kind">Services marketplace</div>
+        <div class="kind">AAIT · Services marketplace</div>
         <h3>Serva</h3>
-        <p>Connects customers with service providers through real-time chat and live map tracking.</p>
+        <p>Connects clients with service providers through real-time chat and live provider location tracking.</p>
         <div class="tags"><span class="tag">Socket.IO</span><span class="tag">Google Maps</span><span class="tag">Clean Architecture</span></div>
         <div class="links">
           <a href="https://apps.apple.com/eg/app/serva/id6746226848" target="_blank" rel="noopener">Client app</a>
@@ -224,7 +231,15 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
       </div>
 
       <div class="card">
-        <div class="kind">Multi-merchant platform</div>
+        <div class="kind">AAIT · Family social app</div>
+        <h3>Al-Kharashi</h3>
+        <p>Private family app connecting members through posts, magazines, events, and an interactive family tree.</p>
+        <div class="tags"><span class="tag">MVVM-C</span><span class="tag">Clean Architecture</span></div>
+        <div class="links"><span class="nolink">Private app</span></div>
+      </div>
+
+      <div class="card">
+        <div class="kind">AAIT · Multi-merchant platform</div>
         <h3>Wassla</h3>
         <p>A three-app platform for customers, merchants, and delivery drivers.</p>
         <div class="tags"><span class="tag">UIKit</span><span class="tag">REST</span><span class="tag">Maps</span></div>
@@ -236,7 +251,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
       </div>
 
       <div class="card">
-        <div class="kind">E-commerce</div>
+        <div class="kind">AAIT · E-commerce</div>
         <h3>Ketaah</h3>
         <p>Marketplace for auto spare parts and services, with Apple Pay checkout.</p>
         <div class="tags"><span class="tag">Apple Pay</span><span class="tag">Moyasar</span></div>
@@ -244,7 +259,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
       </div>
 
       <div class="card">
-        <div class="kind">Logistics</div>
+        <div class="kind">AAIT · Logistics</div>
         <h3>Rubikloadboard</h3>
         <p>Freight transport app with place search, live maps, and real-time chat.</p>
         <div class="tags"><span class="tag">Google Places</span><span class="tag">WebSocket</span></div>
@@ -252,7 +267,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
       </div>
 
       <div class="card">
-        <div class="kind">E-commerce</div>
+        <div class="kind">AAIT · E-commerce</div>
         <h3>Themar Lohoom</h3>
         <p>Online store for meat products with integrated card payments.</p>
         <div class="tags"><span class="tag">HyperPay</span><span class="tag">UIKit</span></div>
@@ -278,11 +293,12 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
     <div class="job">
       <div class="when mono">Feb 2026 – Jul 2026</div>
       <div>
-        <h3>InnovaDigits <span>· iOS Developer · Remote</span></h3>
+        <h3>InnovaDigits <span>· iOS Developer (Contract) · Remote</span></h3>
         <ul>
-          <li>Built <a href="https://apps.apple.com/eg/app/event-box/id6762186425" target="_blank" rel="noopener" style="color:var(--accent)">Event Box</a>'s core features fully in SwiftUI with MVVM-C, per-feature DI containers, <code>@Observable</code>, and async/await.</li>
-          <li>Designed a type-safe router that coordinates 10+ modular features across independent per-tab navigation stacks.</li>
-          <li>Shipped real-time chat (Pusher), deep-link and push routing, vendor booking flows, QR guest invitations, and a loyalty system.</li>
+          <li>Developed the iOS app for <a href="https://apps.apple.com/eg/app/event-box/id6762186425" target="_blank" rel="noopener">Event-Box</a>, an event-planning marketplace, end to end, from initial setup to App Store release, using SwiftUI and Clean Architecture (MVVM + Coordinators).</li>
+          <li>Worked within a cross-functional team of business analysts, QA, backend, and Android developers to plan, build, and test features.</li>
+          <li>Acted as the communication link between the backend team and the Android developer, relaying new requirements and change requests to keep both platforms aligned.</li>
+          <li>Delivered the project on completion of the contract; the app is published on the App Store.</li>
         </ul>
       </div>
     </div>
@@ -290,11 +306,13 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
     <div class="job">
       <div class="when mono">Sep 2021 – May 2026</div>
       <div>
-        <h3>AAIT (Awamer Alshabaka) <span>· iOS Developer</span></h3>
+        <h3>AAIT (Awamer Alshabaka) <span>· iOS Developer · Mansoura, Egypt</span></h3>
         <ul>
-          <li>Shipped 50+ releases across client apps serving 10K+ users, as part of a 10-person team.</li>
-          <li>Built VoIP calling, live streaming, real-time chat, maps, and payment integrations for Saudi and Gulf clients.</li>
-          <li>Added a local caching layer over REST and WebSocket APIs that cut load times by 20%.</li>
+          <li>Built and maintained client iOS apps serving 10K+ users, using Swift and UIKit, as part of a 10-person development team.</li>
+          <li>Delivered apps across varied domains: legal consultation with voice/video calls, live-streaming education, real-time service marketplaces, a livestock ERP, e-commerce, and logistics.</li>
+          <li>Integrated REST and WebSocket APIs, and implemented local caching that reduced load times by 20%.</li>
+          <li>Worked with backend, product, and design teams to plan and deliver features, shipping 50+ releases over 4+ years.</li>
+          <li>Managed app builds and releases through TestFlight and App Store Connect.</li>
         </ul>
       </div>
     </div>
@@ -306,12 +324,28 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 40px
     <h2>Skills</h2>
     <p class="sub">What I work with day to day.</p>
     <div class="skills">
-      <div class="skill"><h4>Language &amp; UI</h4><div class="tags"><span class="tag">Swift 6</span><span class="tag">SwiftUI</span><span class="tag">UIKit</span><span class="tag">Combine</span><span class="tag">async/await</span><span class="tag">Actors</span></div></div>
-      <div class="skill"><h4>Architecture</h4><div class="tags"><span class="tag">Clean Architecture</span><span class="tag">MVVM-C</span><span class="tag">Dependency Injection</span><span class="tag">Modularization (SPM)</span><span class="tag">SOLID</span></div></div>
-      <div class="skill"><h4>Data</h4><div class="tags"><span class="tag">SwiftData</span><span class="tag">Core Data</span><span class="tag">GRDB / SQLite</span><span class="tag">Realm</span><span class="tag">Offline sync</span></div></div>
-      <div class="skill"><h4>Real-time &amp; media</h4><div class="tags"><span class="tag">WebSocket</span><span class="tag">Socket.IO</span><span class="tag">Pusher</span><span class="tag">Agora</span><span class="tag">OpenTok</span><span class="tag">CallKit / PushKit</span></div></div>
+      <div class="skill"><h4>Languages &amp; Frameworks</h4><div class="tags"><span class="tag">Swift 6</span><span class="tag">SwiftUI</span><span class="tag">UIKit</span><span class="tag">Combine</span><span class="tag">Observation</span></div></div>
+      <div class="skill"><h4>Concurrency</h4><div class="tags"><span class="tag">async/await</span><span class="tag">Actors</span><span class="tag">Structured concurrency</span><span class="tag">Sendable</span><span class="tag">@MainActor</span><span class="tag">Strict concurrency checking</span></div></div>
+      <div class="skill"><h4>Architecture</h4><div class="tags"><span class="tag">Clean Architecture</span><span class="tag">MVVM + Coordinators</span><span class="tag">Custom Router navigation</span><span class="tag">Per-feature DI</span><span class="tag">Modular codebases</span><span class="tag">SOLID</span></div></div>
+      <div class="skill"><h4>Networking</h4><div class="tags"><span class="tag">REST (URLSession, Alamofire)</span><span class="tag">WebSockets</span><span class="tag">Pusher</span><span class="tag">Socket.IO</span></div></div>
+      <div class="skill"><h4>Real-time &amp; Media</h4><div class="tags"><span class="tag">Agora</span><span class="tag">OpenTok (Vonage)</span><span class="tag">CallKit</span><span class="tag">PushKit</span><span class="tag">AVFoundation</span></div></div>
+      <div class="skill"><h4>Data &amp; Storage</h4><div class="tags"><span class="tag">Core Data</span><span class="tag">Realm</span><span class="tag">SwiftData</span><span class="tag">GRDB / SQLite</span><span class="tag">Offline sync</span></div></div>
       <div class="skill"><h4>Payments</h4><div class="tags"><span class="tag">Apple Pay</span><span class="tag">HyperPay</span><span class="tag">Moyasar</span><span class="tag">PayTabs</span></div></div>
-      <div class="skill"><h4>Tooling</h4><div class="tags"><span class="tag">Git</span><span class="tag">XCTest</span><span class="tag">TestFlight</span><span class="tag">App Store Connect</span><span class="tag">Claude Code</span><span class="tag">Localization / RTL</span></div></div>
+      <div class="skill"><h4>App Services</h4><div class="tags"><span class="tag">Push notifications</span><span class="tag">Deep linking</span><span class="tag">Universal Links (AASA)</span><span class="tag">Google Maps</span><span class="tag">Localization / RTL</span></div></div>
+      <div class="skill"><h4>Tooling &amp; Delivery</h4><div class="tags"><span class="tag">Git</span><span class="tag">Swift Package Manager</span><span class="tag">CocoaPods</span><span class="tag">XCTest</span><span class="tag">TestFlight</span><span class="tag">App Store Connect</span></div></div>
+      <div class="skill"><h4>AI-Assisted Development</h4><div class="tags"><span class="tag">Claude Code</span><span class="tag">Codex</span><span class="tag">CLAUDE.md guidelines</span><span class="tag">Prompt playbooks</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education &amp; Courses</h2>
+    <p class="sub">&nbsp;</p>
+    <div class="edu">
+      <div class="skill"><h4>Mansoura University</h4><p>Bachelor of Computers and Information · 2016 – 2020</p></div>
+      <div class="skill"><h4>Claude Code in Action</h4><p>Anthropic</p></div>
+      <div class="skill"><h4>Swift 5 iOS Application Developer</h4><p>Coursera</p></div>
     </div>
   </div>
 </section>
